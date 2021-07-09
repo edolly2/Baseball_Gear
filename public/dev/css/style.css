@@ -42,6 +42,13 @@ li {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  color: #00004e;
+}
+
+li:hover {
+  cursor: pointer;
+  color: #cab63b;
+  background-color: #00004e;
 }
 
 a,
@@ -101,6 +108,8 @@ header {
 .list-item:hover, .list-item:focus {
   border-bottom: 2px solid #cab63b;
   cursor: pointer;
+  color:#00004e;
+  background-color: transparent;
 }
 
 .list-item {
@@ -192,8 +201,66 @@ header {
   display: none;
 }
 
-.nav-modal-gloves {
-  /* background-color: black; */
-  width: 100%;
+.all-ul {
+  width: 25%;
+}
+
+.nav-modal {
   /* display: none; */
 }
+
+.nav-modal-sublist {
+  /* display: none; */
+  margin-left: 4rem;
+  cursor: pointer;
+}
+
+
+.nav-modal-youth {
+  display: none;
+}
+
+.nav-modal-adult {
+  display: none;
+}
+
+.nav-modal-accessories {
+  display: none;
+}
+
+.nav-modal-training {
+  display: none;
+}
+
+.youth-sublist-gloves {
+  display: none;
+}
+
+.youth-sublist-shoes {
+  display: none;
+}
+
+.youth-sublist-apparel {
+  display: none;
+}
+
+.adult-sublist-gloves {
+  display: none;
+}
+
+.adult-sublist-bats {
+  display: none;
+}
+
+.adult-sublist-shoes {
+  display: none;
+}
+
+.adult-sublist-apparel {
+  display: none;
+}
+
+
+
+
+
