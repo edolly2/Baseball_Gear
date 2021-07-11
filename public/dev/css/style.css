@@ -28,7 +28,7 @@ body {
   /* position: relative; */
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: "Montserrat";
 }
 
@@ -45,12 +45,6 @@ li {
   color: #00004e;
 }
 
-li:hover {
-  cursor: pointer;
-  color: #cab63b;
-  background-color: #00004e;
-}
-
 a,
 button {
   text-decoration: none;
@@ -58,6 +52,7 @@ button {
 }
 
 header {
+  background-color: #fff;
   position: absolute;
   min-height: 9rem;
   /* top: 0; */
@@ -69,9 +64,22 @@ header {
   z-index: 2;
 }
 
+.is-active {
+  border-bottom: 2px solid #cab63b;
+}
+
+.active {
+  color:#cab63b;
+  background-color:#00004e;
+}
+
 /*================
 ======HEADER======
 ================*/
+
+.header-cont {
+  position: relative;
+}
 
 .header-logo-cont {
   margin: 1rem 2rem;
@@ -98,18 +106,23 @@ header {
   position: relative;
 }
 
-.list-item {
-  margin-left: 3rem;
-  white-space: nowrap;
-  font-size: clamp(1.6rem, 1.3vw, 2rem);
-  border-bottom: 2px solid transparent;
+.nav-link {
+margin-left: 3rem;
+border-bottom: 2px solid transparent;
 }
 
-.list-item:hover, .list-item:focus {
+.list-item {
+  /* margin-left: 3rem; */
+  color:#00004e;
+  white-space: nowrap;
+  font-size: clamp(1.6rem, 1.3vw, 2rem);
+}
+
+
+
+.nav-link:hover, .nav-link:focus {
   border-bottom: 2px solid #cab63b;
   cursor: pointer;
-  color:#00004e;
-  background-color: transparent;
 }
 
 .list-item {
@@ -132,19 +145,22 @@ header {
   color: #00004e;
 }
 
-.nav-search-item:hover,
+
+
+/* .nav-search-item:hover,
 .nav-cart-item:hover,
 .nav-account-item:hover {
   border-bottom: 2px solid transparent;
-}
+} */
 
-.nav-cart-item {
+.nav-cart-link {
   margin-right: 3rem;
   margin-left: 1rem;
 }
 
 .search-bar-cont {
   display: flex;
+  margin-left: 3rem;
 }
 
 #nav-search {
@@ -168,6 +184,7 @@ header {
 .fa-search {
   padding: 0.5rem;
   border-radius: 0.4rem;
+  cursor: pointer;
 }
 
 .fa-search:hover,
@@ -179,6 +196,10 @@ header {
 .fa-shopping-cart,
 .fa-user {
   margin-right: 1rem;
+}
+
+.account-btn {
+  margin-left: 1rem;
 }
 
 
@@ -201,8 +222,15 @@ header {
   display: none;
 }
 
+.nav-modal-cont li:hover {
+  cursor: pointer;
+  color: #cab63b;
+  background-color: #00004e;
+}
+
 .all-ul {
   width: 25%;
+  white-space: nowrap;
 }
 
 .nav-modal {
@@ -260,7 +288,90 @@ header {
   display: none;
 }
 
+/*===================
+======MAIN HOME======
+===================*/
+
+.main-home-page-cont {
+  min-width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/grass.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.main-home-div {
+width: 50%;
+}
+
+.main-home-div-gloves {
+margin-left: auto;
+padding-top: 9rem;
+}
+
+.main-home-div-bats {
+  margin-right: auto;
+  background-color: #fff;
+  padding: 10rem 0;
+  }
+
+.wilson-glove, .tpx-bat {
+  width: 100%;
+  height: auto;
+}
 
 
+/*=======================
+======SIGN IN MODAL======
+=======================*/
 
+.signin-modal-cont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  text-align: center;
+  width: 40%;
+  height: 50%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
 
+.signin-modal-title-cont {
+  font-size: 2.4rem;
+  margin: 3rem 0;
+  font-weight: 900;
+}
+
+.sigin-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+
+.sigin-form label {
+  font-size: 1.6rem;
+  margin-right: auto;
+}
+
+.sigin-form input {
+  font-size: 1.4rem;
+  padding-left: 0.5rem;
+}
+
+#signin-email {
+  margin-bottom: 1rem;
+}
+
+.form-links-cont {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 3rem 0;
+  padding: 0 3rem;
+}

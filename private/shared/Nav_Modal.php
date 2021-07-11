@@ -1,4 +1,4 @@
-<div class="nav-modal-cont">
+<div id="nav-modal-cont" class="nav-modal-cont">
     <div class="nav-modal nav-modal-youth">
         <ul class="all-ul youth-ul">
             <li class="youth-list youth-list-gloves">Gloves <i class="fas fa-caret-down"></i></li>
